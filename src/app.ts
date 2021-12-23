@@ -1,10 +1,9 @@
-/* import express, { Application } from "express"
+import express, { Application } from "express"
 import cors from "cors"
-import dotenv from "dotenv" */
-import { showResult } from "./controllers/result.controller";
+import dotenv from "dotenv"
 
 /* Declare routes*/
-/* import { router as resultRoutes} from "./routes/result.routes"
+import { router as resultRoutes} from "./routes/result.routes"
 
 dotenv.config();
 
@@ -14,7 +13,6 @@ app.use(express.json());
 app.use(cors())
 
 // Api routes
-app.use('/api/', resultRoutes); */
+app.use('/api/', resultRoutes);
 
-showResult();
-//export default app;
+export default app;

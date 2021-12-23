@@ -4,7 +4,7 @@ import { getServerlessInfo, login } from "../services/prismaCloud/CWPP"
 import { authenticate, getCollection } from "../services/prismaCloud/CSPM";
 
 import { rules } from "../utils/complianceRules"
-export async function showResult() {
+export async function showResult(req: Request, res: Response) {
 
   try{
     const authToken = await authenticate()
@@ -50,14 +50,12 @@ export async function showResult() {
       }]
     })
 
-    /* res.json({
+    res.json({
       status: 200,
       data: {
        complianceInfo
       }
-    }); */
-
-    console.log(complianceInfo)
+    });
   } catch(err) {
     console.log(err, 2)
   }
